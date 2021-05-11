@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-     <input type="button" value="night" onclick="
+    <!-- 
+    <input type="button" value="night" onclick="
       document.querySelector('body').style.backgroundColor='black';
       document.querySelector('body').style.color='white';
      ">
@@ -14,6 +15,20 @@
       document.querySelector('body').style.backgroundColor='white';
       document.querySelector('body').style.color='black';
      ">
+    -->
+      <input type="button" value="night" onclick="
+          if(this.value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('body').dataset.mode = 'night';
+        this.value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('body').dataset.mode = 'day';
+        this.value ='night';
+      }
+      ">
     <h1><a href="index.html">Dev Thomas Lee</a></h1>
       <div id="grid">
         <ol>
