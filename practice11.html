@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!--
+    <!-- 1st try
      <input type="button" value="night" onclick="
       document.querySelector('body').style.backgroundColor='black';
       document.querySelector('body').style.color='white';
@@ -16,6 +16,7 @@
       document.querySelector('body').style.color='black';
      ">
     -->
+    <!-- 2nd try
      <input type="button" value="night" onclick="
       if(this.value === 'night') {
         document.querySelector('body').style.backgroundColor = 'black';
@@ -29,6 +30,35 @@
         this.value ='night';
       }
       ">
+     -->
+          <input type="button" value="night" onclick="
+      var target = document.querySelector('body');
+      if(this.value ==='night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var  i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color ='black';
+        this.value ='night';
+
+        var alist = document.querySelectorAll('a');
+        var  i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'green';
+          i = i + 1;
+        }
+      }
+      ">
     <h1><a href="index.html">Dev Thomas Lee</a></h1>
       <div id="grid">
         <ol>
@@ -38,7 +68,7 @@
           <a href="practice13.html" class="coloring1"><li>Goal</li></a>
         </ol>
           <div id="article">
-            <h2><span style="color:green">2.Career</span></h2>
+            <h2><span style="color:green"><a href="practice11.html">2.Career</a></span></h2>
             <img src="green-chameleon-s9CC2SKySJM-unsplash.jpg" width="50%">
             <p>
             1. 컨설팅 <br><br>
