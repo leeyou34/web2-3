@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!--<input type="button" value="night" onclick="
+    <!-- 1st try
+     <input type="button" value="night" onclick="
       document.querySelector('body').style.backgroundColor='black';
       document.querySelector('body').style.color='white';
      ">
@@ -14,6 +15,7 @@
       document.querySelector('body').style.backgroundColor='white';
       document.querySelector('body').style.color='black';
      "> -->
+    <!-- 2nd try
     <input id="night_day" type="button" value="day" onclick="
       if(document.querySelector('#night_day').value === 'night'){
       document.querySelector('body').style.backgroundColor='black';
@@ -25,6 +27,35 @@
       document.querySelector('#night_day').value ='night';
     }
     ">
+    -->
+      <input type="button" value="night" onclick="
+      var target = document.querySelector('body');
+      if(this.value ==='night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var  i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color ='black';
+        this.value ='night';
+
+        var alist = document.querySelectorAll('a');
+        var  i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'green';
+          i = i + 1;
+        }
+      }
+      ">    
     <h1><a href="index.html">Dev Thomas Lee</a></h1>
       <div id="grid">
         <ol>
@@ -34,7 +65,7 @@
           <a href="practice13.html" class="coloring1"><li>Goal</li></a>
         </ol>
         <div id="article">
-        <h2><span style="color:green">Dev Thomas Lee</span></h2>
+          <h2><span style="color:green"><a href="index.html">Dev Thomas Lee</a></span></h2>
         <img src="dev.thom.jpg" width="25%">
         <p>This is developer Thomas Lee’s website. Thank you for visiting.<br><br>
         If you would like to check more details, please check the above list.<br><br>
