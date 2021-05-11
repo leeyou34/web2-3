@@ -71,10 +71,19 @@
             <h2><span style="color:green"><a href="practice11.html">2.Career</a></span></h2>
             <img src="green-chameleon-s9CC2SKySJM-unsplash.jpg" width="50%">
             <p>
-            1. 컨설팅 <br><br>
-            2. 교육<br><br>
-            3. IT 영업<br><br>
-            4. 건축 신규사업팀 영업<br><br></p>
+              <script>
+              var career = ['컨설팅', '교육', 'IT영업', '건축 신규사업팀 영업'];
+              </script>
+              <ol2>
+                <script>
+                  var i = 0;
+                  while(i < 4) {
+                    document.write('<li>'+career[i]+'</li>');
+                    i = i + 1;
+                  }
+                </script>
+              </ol2>
+            </p>
           </div>
         </div>
       </body>
